@@ -2,8 +2,8 @@
 font-family: 'Lexend Deca', sans-serif; */
 
 html *{
- background: rgba(238, 130, 238, 0.285);
- outline: dotted 2px;
+ /* background: rgba(238, 130, 238, 0.285);
+ outline: dotted 2px; */
  margin: 0;
 }
 
@@ -46,12 +46,13 @@ main{
 }
 
 #statistics{
-    align-items: center;
+    align-content: center;
     justify-content: center;
     text-align: center;
     display: flex;
     flex-direction: column;
     padding: 20px 20px 30px 20px;
+    position: relative;
 }
 
 strong{
@@ -94,7 +95,7 @@ strong{
         margin-top: 5px;
     }
 
-    @media (min-width: 500px){
+    @media (min-width: 1000px){
 
         main{
             flex-direction: row-reverse;
@@ -103,7 +104,6 @@ strong{
         }
 
         #imgFilter{
-            position: relative;
             background-color: rgb(83, 0, 138);
         }
 
@@ -119,16 +119,17 @@ strong{
                 "stat1 stat2 stat3"
                 "companies templates queries"
                 ; 
+            padding: 0 100px 0 50px;
+            text-align: left;
         }
 
         #statsHeader{
             grid-area: header;
-            text-align: left;
+            font-size: 30px;
         }
 
         #statsText{
             grid-area: paragraph;
-            text-align: left;
         }
 
         #statCompanies{
@@ -141,5 +142,9 @@ strong{
 
         #statQueries{
             grid-area: stat3;
+        }
+
+        .stat{
+            margin-top: 60px;
         }
     }
