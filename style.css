@@ -1,0 +1,145 @@
+/* font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif; */
+
+html *{
+ background: rgba(238, 130, 238, 0.285);
+ outline: dotted 2px;
+ margin: 0;
+}
+
+html{
+    background: black;
+    color: white;
+    font-size: 15px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    min-width: 270px;
+    background: #1c1938;
+    border-radius: 7px;
+    overflow: hidden;
+    margin: 0 20px 0 20px;
+}
+   
+#imgFilter{
+    position: relative;
+    background-color: rgb(83, 0, 138);
+}
+
+#heroIMG{
+    position: relative;
+    opacity: 40%;
+    width: 100%;
+    height: 100%;
+}
+
+#statistics{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 30px 20px;
+}
+
+strong{
+    color: #9564bf;
+}
+
+#statsText{
+   margin-top: 20px;
+   color: #a09eb6;
+}
+
+.stat{
+    margin-top: 30px;
+}
+
+ /* display: grid;
+    grid-template-areas: 
+    "header header header"
+    "paragraph paragraph paragraph"
+    "stat stat stat"
+    "companies templates queries"
+    ; */
+
+    /* grid-template-areas: 
+    "header"
+    "paragraph"
+    "stat"
+    "companies"
+    "stat"
+    "templates"
+    "stat"
+    "queries"
+    ; */
+
+    .statName{
+        color: #a09eb6;
+        text-transform: uppercase;
+        font-family: 'Lexend Deca', sans-serif;
+        font-size: 10px;
+        margin-top: 5px;
+    }
+
+    @media (min-width: 500px){
+
+        main{
+            flex-direction: row-reverse;
+            max-width: 1000px;
+            max-height: 400px;
+        }
+
+        #imgFilter{
+            position: relative;
+            background-color: rgb(83, 0, 138);
+        }
+
+        #heroIMG{
+            min-width: 500px;
+        }
+
+        #statistics{
+            display: grid;
+            grid-template-areas: 
+                "header header header"
+                "paragraph paragraph paragraph"
+                "stat1 stat2 stat3"
+                "companies templates queries"
+                ; 
+        }
+
+        #statsHeader{
+            grid-area: header;
+            text-align: left;
+        }
+
+        #statsText{
+            grid-area: paragraph;
+            text-align: left;
+        }
+
+        #statCompanies{
+            grid-area: stat1;
+        }
+
+        #statTemplates{
+            grid-area: stat2;
+        }
+
+        #statQueries{
+            grid-area: stat3;
+        }
+    }
